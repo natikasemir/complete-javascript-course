@@ -21,3 +21,22 @@ console.log(typeof language);
 language = 'German';
 console.log(language);
 
+// Assignment 04
+
+let halfPopulation = population / 2;
+console.log(halfPopulation);
+
+console.log(population + 1)
+
+let populationFinland = 6000000;
+
+if (population < populationFinland) {
+    console.log(country + ' has less people than Finland');
+}
+else {
+    console.log('You live in a loser country.')
+};
+
+let description = 'You know, living in ' + country + ' and speaking ' + language + ' is not that easy.';
+
+console.log(description);
