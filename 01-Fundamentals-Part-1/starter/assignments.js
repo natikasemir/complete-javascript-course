@@ -16,8 +16,8 @@ console.log(typeof population);
 console.log(typeof country);
 console.log(typeof language);
 
-language = 'German';
+// Assignment 03
 
+language = 'German';
 console.log(language);
 
-// Assignment 03
