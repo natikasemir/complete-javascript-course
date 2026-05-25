@@ -6,6 +6,7 @@ let population = 83000000;
 
 console.log(country, continent, population);
 
+
 // Assignment 02
 
 let isIsland = false;
@@ -16,10 +17,12 @@ console.log(typeof population);
 console.log(typeof country);
 console.log(typeof language);
 
+
 // Assignment 03
 
 language = 'German';
 console.log(language);
+
 
 // Assignment 04
 
@@ -41,6 +44,7 @@ let description = 'You know, living in ' + country + ' and speaking ' + language
 
 console.log(description);
 
+
 // Challenge 01
 
 let weightMark = 78;
@@ -54,6 +58,7 @@ let BMIJohn = weightJohn / heightJohn ** 2;
 let markHigherBMI = BMIMark > BMIJohn;
 
 console.log(markHigherBMI);
+
 
 // Assignment #05
 
