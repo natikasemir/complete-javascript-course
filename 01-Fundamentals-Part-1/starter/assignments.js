@@ -54,3 +54,12 @@ let BMIJohn = weightJohn / heightJohn ** 2;
 let markHigherBMI = BMIMark > BMIJohn;
 
 console.log(markHigherBMI);
+
+// Assignment #05
+
+const name = 'Nati';
+const job = 'Junior Frontend Developer';
+const birthYear = 1994;
+const currentYear = 2026;
+
+console.log(`Hello, my Name is ${name}! I am a ${job} and I'm ${currentYear - birthYear} years old.`);
