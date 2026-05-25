@@ -40,3 +40,17 @@ else {
 let description = 'You know, living in ' + country + ' and speaking ' + language + ' is not that easy.';
 
 console.log(description);
+
+// Challenge 01
+
+let weightMark = 78;
+const heightMark = 1.69;
+let weightJohn = 92;
+const heightJohn = 1.95;
+
+let BMIMark = weightMark / heightMark ** 2;
+let BMIJohn = weightJohn / heightJohn ** 2;
+
+markHigherBMI = BMIMark > BMIJohn;
+
+console.log(markHigherBMI);
