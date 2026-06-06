@@ -111,3 +111,25 @@ if (language === 'English' && population < 50000000 && !isIsland) {
     console.log(`Sarah should live in Portugal. Or elsewhere. Nobody cares anyway.`)
 }
 
+
+// Assignment #10
+
+switch (language) {
+    case 'chinese' || 'mandarin':
+        console.log('MOST number of native speakers!')
+        break
+    case 'spanish':
+        console.log('2nd place in number of native speakers')
+        break
+    case 'english':
+        console.log('3rd place')
+        break
+    case 'hindi':
+        console.log('Number 4');
+        break
+    case 'arabic':
+        console.log('5th most spoken language')
+        break
+    default:
+        console.log('This is also a cool language, yes')
+}
