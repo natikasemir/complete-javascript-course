@@ -133,3 +133,10 @@ switch (language) {
     default:
         console.log('This is also a cool language, yes')
 }
+
+
+// Assignment #11
+
+const populationNote = population > 33000000 ? `${country}s population is above average` : `${country}s population is below average`
+
+console.log(populationNote)
