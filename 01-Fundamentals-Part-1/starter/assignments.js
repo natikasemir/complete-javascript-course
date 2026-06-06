@@ -134,8 +134,9 @@ switch (language) {
         console.log('This is also a cool language, yes')
 }
 
+// Nati, merk Dir den Unterschied zwischen Statement && Expression!
 
-// Assignment #11
+// Assignment #11 - Ternary Operator
 
 const populationNote = population > 33000000 ? `${country}s population is above average` : `${country}s population is below average`
 
