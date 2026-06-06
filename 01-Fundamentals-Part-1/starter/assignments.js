@@ -90,12 +90,24 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); // ->1143
 
 // Assignment #08
 
-const numNeighbors = prompt('How many neighbour countries does your contry have?')
+/* const numNeighbors = Number(prompt('How many neighbour countries does your contry have?'))
 
-if (numNeighbors == 1) {
+if (numNeighbors === 1) {
     console.log('Only 1 border!')
 } else if (numNeighbors > 1) {
     console.log('More than 1 border')
 } else {
     console.log('No borders')
 }
+*/
+
+
+// Assignment #09
+// Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks English, has less than 50 million people and is not an island.
+
+if (language === 'English' && population < 50000000 && !isIsland) {
+    console.log(`Sarah should definitely live in ${country}!`)
+} else {
+    console.log(`Sarah should live in Portugal. Or elsewhere. Nobody cares anyway.`)
+}
+
