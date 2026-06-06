@@ -68,3 +68,12 @@ const birthYear = 1994;
 const currentYear = 2026;
 
 console.log(`Hello, my Name is ${name}! I am a ${job} and I'm ${currentYear - birthYear} years old.`);
+
+
+// Assignment #06
+
+if (population > 33000000) {
+    console.log(`The population of ${country} is higher than average.`)
+} else {
+    console.log(`The population of ${country} is below average.`)
+}
