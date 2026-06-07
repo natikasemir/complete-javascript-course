@@ -89,3 +89,24 @@ console.log(populations.length === 4)
 const percentages = new Array(percentageOfWorld1(Germany), percentageOfWorld1(Portugal), percentageOfWorld1(Island), percentageOfWorld1(China))
 
 console.log(percentages)
+
+
+// Assignment #17 - Array operations
+
+/* Merke! push, unshift, pop, shift, indexOf, includes */
+
+const neighbours = new Array('Germany', 'Austria', 'Poland', 'Denmark')
+neighbours.push('Utopia')
+console.log(neighbours)
+neighbours.pop('Utopia')
+console.log(neighbours)
+
+if (!neighbours.includes('Utopia')) {
+    console.log(`Probably not a central european country :D`)
+}
+
+console.log(neighbours.indexOf('Austria'))
+
+neighbours[neighbours.indexOf('Austria')] = 'Sweden'
+
+console.log(neighbours)
