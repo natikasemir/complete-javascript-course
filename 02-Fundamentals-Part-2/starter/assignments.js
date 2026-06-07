@@ -35,6 +35,7 @@ const percentageOfWorld2 = function (population) {
 
 console.log(percentageOfWorld2(Germany), percentageOfWorld2(Portugal), percentageOfWorld2(Island))
 
+
 // Assignment #14
 
 // Arrow function
@@ -42,3 +43,28 @@ console.log(percentageOfWorld2(Germany), percentageOfWorld2(Portugal), percentag
 const percentageOfWorld3 = population => population / 7900000000 * 100;
 
 console.log(percentageOfWorld3(Germany), percentageOfWorld3(Portugal), percentageOfWorld3(Island))
+
+
+// Challenge #01
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3
+
+let scoreDolphins = calcAverage(44, 23, 71)
+let scoreKoalas = calcAverage(65, 54, 49)
+let scoreDolphins2 = calcAverage(85, 54, 41)
+let scoreKoalas2 = calcAverage(23, 34, 27)
+
+console.log(scoreDolphins, scoreKoalas, scoreDolphins2, scoreKoalas2)
+
+function checkWinner(avgDolphins, avgKoalas) {
+    if (avgDolphins >= (avgKoalas * 2)) {
+        console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`)
+    } else if (avgKoalas >= (avgDolphins * 2)) {
+        console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`)
+    } else {
+        console.log(`No team wins...`)
+    }
+}
+
+checkWinner(scoreDolphins, scoreKoalas)
+checkWinner(scoreDolphins2, scoreKoalas2)
