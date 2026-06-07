@@ -12,3 +12,25 @@ function describeCountry(country, population, capitalCity) {
 const germany = describeCountry('Germany', 83, 'Berlin')
 
 console.log(germany)
+
+
+// Assignment #13
+
+// function declaration
+function percentageOfWorld1(population) {
+    return (population / 7900000000) * 100
+}
+
+let Germany = 83000000
+let Portugal = 33000000
+let Island = 320000
+
+console.log(percentageOfWorld1(Germany), percentageOfWorld1(Portugal), percentageOfWorld1(Island))
+
+// function expression
+
+const percentageOfWorld2 = function (population) {
+    return (population / 7900000000) * 100
+}
+
+console.log(percentageOfWorld2(Germany), percentageOfWorld2(Portugal), percentageOfWorld2(Island))
