@@ -24,6 +24,7 @@ function percentageOfWorld1(population) {
 let Germany = 83000000
 let Portugal = 33000000
 let Island = 320000
+let China = 1441000000
 
 console.log(percentageOfWorld1(Germany), percentageOfWorld1(Portugal), percentageOfWorld1(Island))
 
@@ -70,10 +71,21 @@ checkWinner(scoreDolphins, scoreKoalas)
 checkWinner(scoreDolphins2, scoreKoalas2)
 
 
-// Assignment #15
+// Assignment #15 - Functions calling other functions
 
 function describePopulation(country, population) {
     return `${country} has ${population} people, which is about ${percentageOfWorld1(population)}% of the world.`
 }
 
 console.log(describePopulation('China', 1441000000))
+
+
+// Assignment #16 - Introduction to arrays
+
+const populations = new Array(Germany, Portugal, Island, China)
+
+console.log(populations.length === 4)
+
+const percentages = new Array(percentageOfWorld1(Germany), percentageOfWorld1(Portugal), percentageOfWorld1(Island), percentageOfWorld1(China))
+
+console.log(percentages)
