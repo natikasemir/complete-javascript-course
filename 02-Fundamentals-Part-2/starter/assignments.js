@@ -68,3 +68,12 @@ function checkWinner(avgDolphins, avgKoalas) {
 
 checkWinner(scoreDolphins, scoreKoalas)
 checkWinner(scoreDolphins2, scoreKoalas2)
+
+
+// Assignment #15
+
+function describePopulation(country, population) {
+    return `${country} has ${population} people, which is about ${percentageOfWorld1(population)}% of the world.`
+}
+
+console.log(describePopulation('China', 1441000000))
