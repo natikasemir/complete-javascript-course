@@ -34,3 +34,11 @@ const percentageOfWorld2 = function (population) {
 }
 
 console.log(percentageOfWorld2(Germany), percentageOfWorld2(Portugal), percentageOfWorld2(Island))
+
+// Assignment #14
+
+// Arrow function
+
+const percentageOfWorld3 = population => population / 7900000000 * 100;
+
+console.log(percentageOfWorld3(Germany), percentageOfWorld3(Portugal), percentageOfWorld3(Island))
