@@ -110,3 +110,25 @@ console.log(neighbours.indexOf('Austria'))
 neighbours[neighbours.indexOf('Austria')] = 'Sweden'
 
 console.log(neighbours)
+
+
+// Challenge #02
+
+function calcTip(billValue) {
+    if (billValue < 300 && billValue > 50) {
+        return (billValue * 0.15)
+    } else {
+        return (billValue * 0.20)
+    }
+}
+
+console.log(calcTip(100))
+
+const bills = new Array(125, 555, 44)
+const tips = new Array(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]))
+
+console.log(tips)
+
+const totals = new Array(bills[0] + calcTip(bills[0]), bills[1] + calcTip(bills[1]), bills[2] + calcTip(bills[2]))
+
+console.log(totals)
