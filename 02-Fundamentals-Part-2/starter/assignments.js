@@ -142,7 +142,7 @@ const myCountry = {
     capital: 'Berlin',
     language: 'buerocracy',
     population: '83500000',
-    neighbours: ['Austria', 'Poland', 'Belgium', 'Switzerland', 'Czech Republic', 'Netherlands', 'Denmark', 'France', 'Luxembourg']
+    neighbours: ['Austria', 'Poland', 'Belgium', 'Switzerland', 'Czech Republic', 'Netherlands', 'Denmark', 'France', 'Luxembourg'],
 }
 
 // Assignment #19
@@ -158,3 +158,41 @@ const decreasePop = myCountry['population'] - 2000000
 console.log(decreasePop)
 
 //One can say: Dot-Notation is for absolute, while bracket notation is for computed.
+
+// Assignment #20
+
+// Add a method called describe to the myCountry object.This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
+// Call the describe method.
+// Add a method called checkIsland to the myCountry object.This method will set a new property on the object, called isIsland.isIsland will be true if there are no neighbouring countries, and false if there are.Use the ternary operator to set the property.
+
+myCountry.describe = function () {
+    console.log(`${this.country} has ${this.population} ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`)
+}
+
+myCountry.describe()
+
+myCountry.checkIsIsland = function () {
+    if (myCountry.neighbours.length === 0) {
+        myCountry.isIsland = true
+        console.log(`${this.country} is an island.`)
+    } else {
+        myCountry.isIsland = false
+        console.log(`${this.country} is not an island.`)
+    }
+}
+
+myCountry.checkIsIsland()
+
+const myCountry2 = {
+    country: 'Utopia',
+    capital: 'Heaven',
+    language: 'gibberish',
+    population: '1337',
+    neighbours: [],
+}
+
+myCountry2.checkIsIsland = function () {
+    myCountry2.neighbours.length === 0 ? myCountry2.isIsland = true && console.log(`${this.country} is an island.`) : myCountry2.isIsland = false && console.log(`${this.country} is not an island.`)
+}
+
+myCountry2.checkIsIsland()
