@@ -243,3 +243,29 @@ let votes
 for (votes = 1; votes <= 50; votes++) {
     console.log(`Voter number ${votes} is currently voting.`)
 }
+
+// Assignment #22
+
+/*Let's bring back the populations array from a previous assignment.
+Use a for loop to compute an array called percentages2 containing the percentages of the world population for the 4 population values. 
+Use the function percentageWOrld1 that you created earlier.
+
+Confirm that percentages2 contains exactly the same values as the percentages array that we created manually in the previous assignment, 
+and reflect on how much better this solution is.
+*/
+
+console.log(percentages)
+let percentages2 = new Array()
+console.log(populations)
+
+percentageOfWorld1(populations[1])
+
+for (i = 0; i < populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]))
+}
+
+console.log(percentages2)
+
+for (i = 0; i < percentages2.length; i++) {
+    console.log(percentages[i] === percentages2[i])
+}
