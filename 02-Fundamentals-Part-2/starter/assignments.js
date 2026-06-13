@@ -138,10 +138,23 @@ console.log(totals)
 // Create an object called myCountry for a country of your choice, containing properties country, capital, language, population and neighbours (an array like we used in previous assignments).
 
 const myCountry = {
-    country = 'Germany',
-    capital = 'Berlin',
-    language = 'Buerocracy',
-    population = '83500000',
-    neighbours =['Austria', 'Poland', 'Belgium', 'Switzerland', 'Czech Republic', 'Netherlands', 'Denmark', 'France', 'Luxembourg']
+    country: 'Germany',
+    capital: 'Berlin',
+    language: 'buerocracy',
+    population: '83500000',
+    neighbours: ['Austria', 'Poland', 'Belgium', 'Switzerland', 'Czech Republic', 'Netherlands', 'Denmark', 'France', 'Luxembourg']
 }
 
+// Assignment #19
+//Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki'.
+//Increase the country's population by two million using dot notation, and then decrease it by two million using bracket notation.
+
+console.log(`${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
+
+myCountry.population = Number(myCountry.population) + 2000000
+console.log(myCountry.population)
+
+const decreasePop = myCountry['population'] - 2000000
+console.log(decreasePop)
+
+//One can say: Dot-Notation is for absolute, while bracket notation is for computed.
