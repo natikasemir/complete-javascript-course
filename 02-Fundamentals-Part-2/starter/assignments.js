@@ -132,3 +132,16 @@ console.log(tips)
 const totals = new Array(bills[0] + calcTip(bills[0]), bills[1] + calcTip(bills[1]), bills[2] + calcTip(bills[2]))
 
 console.log(totals)
+
+
+// Assignment #18
+// Create an object called myCountry for a country of your choice, containing properties country, capital, language, population and neighbours (an array like we used in previous assignments).
+
+const myCountry = {
+    country = 'Germany',
+    capital = 'Berlin',
+    language = 'Buerocracy',
+    population = '83500000',
+    neighbours =['Austria', 'Poland', 'Belgium', 'Switzerland', 'Czech Republic', 'Netherlands', 'Denmark', 'France', 'Luxembourg']
+}
+
