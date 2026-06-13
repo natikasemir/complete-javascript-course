@@ -192,7 +192,39 @@ const myCountry2 = {
 }
 
 myCountry2.checkIsIsland = function () {
-    myCountry2.neighbours.length === 0 ? myCountry2.isIsland = true && console.log(`${this.country} is an island.`) : myCountry2.isIsland = false && console.log(`${this.country} is not an island.`)
+    myCountry2.neighbours.length === 0 ? this.isIsland = true && console.log(`${this.country} is an island.`) : this.isIsland = false && console.log(`${this.country} is not an island.`)
 }
 
 myCountry2.checkIsIsland()
+
+console.log(myCountry2)
+
+// Challenge #03
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height)
+        return this.bmi
+    }
+}
+
+mark.calcBMI()
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height)
+        return this.bmi
+    }
+}
+
+john.calcBMI()
+
+console.log(`${john.fullName}s BMI (${john.bmi}) is (${john.bmi} > ${mark.bmi} ? 'higher' : 'lower';) than ${mark.fullName}s BMI (${mark.bmi})`)
