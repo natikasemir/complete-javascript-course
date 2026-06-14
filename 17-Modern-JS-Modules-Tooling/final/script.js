@@ -1,4 +1,4 @@
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Exporting and Importing in ES6 Modules
 
 // Importing module
@@ -6,7 +6,6 @@
 // addToCart('bread', 5);
 // console.log(price, tq);
 
-console.log('Importing module');
 // console.log(shippingCost);
 
 // import * as ShoppingCart from './shoppingCart.js';
@@ -16,14 +15,8 @@ console.log('Importing module');
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price);
 
-import add, { cart } from './shoppingCart.js';
-add('pizza', 2);
-add('bread', 5);
-add('apples', 4);
-
-console.log(cart);
+import add, { cart } from './shoppingCart.js'
 /*
-
 
 ///////////////////////////////////////
 // Top-Level Await (ES2022)
@@ -49,7 +42,6 @@ console.log(lastPost);
 
 const lastPost2 = await getLastPost();
 console.log(lastPost2);
-
 
 ///////////////////////////////////////
 // The Module Pattern
@@ -84,7 +76,6 @@ ShoppingCart2.addToCart('pizza', 2);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.shippingCost);
 
-
 ///////////////////////////////////////
 // CommonJS Modules
 // Export
@@ -99,47 +90,53 @@ export.addTocart = function (product, quantity) {
 const { addTocart } = require('./shoppingCart.js');
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Introduction to NPM
 // import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
-import cloneDeep from 'lodash-es';
+import cloneDeep from 'lodash-es'
 
-const state = {
-  cart: [
-    { product: 'bread', quantity: 5 },
-    { product: 'pizza', quantity: 5 },
-  ],
-  user: { loggedIn: true },
-};
-const stateClone = Object.assign({}, state);
-const stateDeepClone = cloneDeep(state);
-
-state.user.loggedIn = false;
-console.log(stateClone);
-
-console.log(stateDeepClone);
-
-if (module.hot) {
-  module.hot.accept();
-}
-
-class Person {
-  #greeting = 'Hey';
-  constructor(name) {
-    this.name = name;
-    console.log(`${this.#greeting}, ${this.name}`);
-  }
-}
-const jonas = new Person('Jonas');
-
-console.log('Jonas' ?? null);
-
-console.log(cart.find(el => el.quantity >= 2));
-Promise.resolve('TEST').then(x => console.log(x));
-
-import 'core-js/stable';
+import 'core-js/stable'
 // import 'core-js/stable/array/find';
 // import 'core-js/stable/promise';
 
 // Polifilling async functions
-import 'regenerator-runtime/runtime';
+import 'regenerator-runtime/runtime'
+console.log('Importing module')
+add('pizza', 2)
+add('bread', 5)
+add('apples', 4)
+
+console.log(cart)
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 5 }
+  ],
+  user: { loggedIn: true }
+}
+const stateClone = Object.assign({}, state)
+const stateDeepClone = cloneDeep(state)
+
+state.user.loggedIn = false
+console.log(stateClone)
+
+console.log(stateDeepClone)
+
+if (module.hot) {
+  module.hot.accept()
+}
+
+class Person {
+  #greeting = 'Hey'
+  constructor (name) {
+    this.name = name
+    console.log(`${this.#greeting}, ${this.name}`)
+  }
+}
+const jonas = new Person('Jonas')
+
+console.log('Jonas' ?? null)
+
+console.log(cart.find(el => el.quantity >= 2))
+Promise.resolve('TEST').then(x => console.log(x))

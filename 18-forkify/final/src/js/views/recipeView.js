@@ -1,36 +1,36 @@
-import View from './View.js';
+import View from './View.js'
 
 // import icons from '../img/icons.svg'; // Parcel 1
-import icons from 'url:../../img/icons.svg'; // Parcel 2
-import { Fraction } from 'fractional';
+import icons from 'url:../../img/icons.svg' // Parcel 2
+import { Fraction } from 'fractional'
 
 class RecipeView extends View {
-  _parentElement = document.querySelector('.recipe');
-  _errorMessage = 'We could not find that recipe. Please try another one!';
-  _message = '';
+  _parentElement = document.querySelector('.recipe')
+  _errorMessage = 'We could not find that recipe. Please try another one!'
+  _message = ''
 
-  addHandlerRender(handler) {
-    ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
+  addHandlerRender (handler) {
+    ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler))
   }
 
-  addHandlerUpdateServings(handler) {
+  addHandlerUpdateServings (handler) {
     this._parentElement.addEventListener('click', function (e) {
-      const btn = e.target.closest('.btn--update-servings');
-      if (!btn) return;
-      const { updateTo } = btn.dataset;
-      if (+updateTo > 0) handler(+updateTo);
-    });
+      const btn = e.target.closest('.btn--update-servings')
+      if (!btn) return
+      const { updateTo } = btn.dataset
+      if (+updateTo > 0) handler(+updateTo)
+    })
   }
 
-  addHandlerAddBookmark(handler) {
+  addHandlerAddBookmark (handler) {
     this._parentElement.addEventListener('click', function (e) {
-      const btn = e.target.closest('.btn--bookmark');
-      if (!btn) return;
-      handler();
-    });
+      const btn = e.target.closest('.btn--bookmark')
+      if (!btn) return
+      handler()
+    })
   }
 
-  _generateMarkup() {
+  _generateMarkup () {
     return `
       <figure class="recipe__fig">
         <img src="${this._data.image}" alt="${
@@ -118,10 +118,10 @@ class RecipeView extends View {
           </svg>
         </a>
       </div>
-    `;
+    `
   }
 
-  _generateMarkupIngredient(ing) {
+  _generateMarkupIngredient (ing) {
     return `
     <li class="recipe__ingredient">
       <svg class="recipe__icon">
@@ -135,8 +135,8 @@ class RecipeView extends View {
         ${ing.description}
       </div>
     </li>
-  `;
+  `
   }
 }
 
-export default new RecipeView();
+export default new RecipeView()

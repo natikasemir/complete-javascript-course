@@ -1,11 +1,11 @@
-import View from './View.js';
-import icons from 'url:../../img/icons.svg'; // Parcel 2
+import View from './View.js'
+import icons from 'url:../../img/icons.svg' // Parcel 2
 
 class PreviewView extends View {
-  _parentElement = '';
+  _parentElement = ''
 
-  _generateMarkup() {
-    const id = window.location.hash.slice(1);
+  _generateMarkup () {
+    const id = window.location.hash.slice(1)
 
     return `
       <li class="preview">
@@ -28,8 +28,8 @@ class PreviewView extends View {
           </div>
         </a>
       </li>
-    `;
+    `
   }
 }
 
-export default new PreviewView();
+export default new PreviewView()
