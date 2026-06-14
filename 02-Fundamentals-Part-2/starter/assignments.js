@@ -112,7 +112,7 @@ neighbours[neighbours.indexOf('Austria')] = 'Sweden'
 console.log(neighbours)
 
 
-// Challenge #02
+/* Challenge #02
 
 function calcTip(billValue) {
     if (billValue < 300 && billValue > 50) {
@@ -131,7 +131,7 @@ console.log(tips)
 
 const totals = new Array(bills[0] + calcTip(bills[0]), bills[1] + calcTip(bills[1]), bills[2] + calcTip(bills[2]))
 
-console.log(totals)
+console.log(totals) */
 
 
 // Assignment #18
@@ -269,3 +269,64 @@ console.log(percentages2)
 for (i = 0; i < percentages2.length; i++) {
     console.log(percentages[i] === percentages2[i])
 }
+
+
+// Assignment #23
+
+listOfCountries = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+]
+
+// Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country.
+// You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+
+for (i = 0; i < listOfCountries.length; i++) {
+    for (y = 0; y < listOfCountries[i].length; y++) {
+        if (listOfCountries[i].length > 1) {
+            console.log(`Neighbour: ${listOfCountries[i][y]}`)
+        }
+    }
+}
+
+
+// Challenge #04
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+/* Write your code below. Good luck! 🙂 */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+
+let tips = []
+let totals = []
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]))
+}
+
+console.log(tips)
+
+
+for (let i = 0; i < bills.length; i++) {
+    totals.push(tips[i] + bills[i])
+}
+
+console.log(totals)
+
+/* OPTIONAL CHALLENGE
+function calcAverage(arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i]
+    }
+    let average = (sum / arr.length)
+    console.log(average)
+    return average
+}
+
+calcAverage(totals) 
+*/
