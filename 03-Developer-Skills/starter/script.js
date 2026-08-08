@@ -21,16 +21,17 @@ Test data:
 
 const printForecast = function (arr) {
 
-let day = 1
-let temp = arr.length
+    let day = 1
+    let str = ''
 
-for (let i = 0; i < temp; i++) {
-
-        console.log(`It will be ${arr[i]} °C in ${day} days`)
+    for (let i = 0; i < arr.length; i++) {
+        str = str + `${arr[i]}` + '°C in' + ` ${day}` + ' days ... '
         // Add 1 Day
         day++
-    }
+        }
+    console.log(`... ${str}`)
 }
+
 
 const data1 = [17, 21, 23]
 const data2 = [12, 5, -5, 0, 4]
